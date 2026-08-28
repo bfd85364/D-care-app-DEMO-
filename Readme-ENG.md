@@ -152,8 +152,6 @@ These are tracked as post-presentation cleanup items:
 
 Specify your license here (e.g., MIT).
 
-# report
- [[붙임]SW중심대학사업 2026학년도 1학기_산학캡스톤디자인 결과보고서.pdf](https://github.com/user-attachments/files/31552199/SW.2026.1._.pdf)
 
 
 
