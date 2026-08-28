@@ -7,6 +7,8 @@ https://drive.google.com/file/d/11BLR-3ndl_VDxocrzM5VM9lh4ScBfyzp/view?usp=shari
 
 https://github.com/user-attachments/assets/41f8884e-9016-403c-8f27-b9b38915a064
 
+[All accounts is dummy-account for test]
+
 # D-Care
 
 **D-Care** is a mobile chronic-disease (diabetes) health management application developed as a cross-departmental capstone design project. It combines an LLM-RAG chatbot for consultation/lifestyle guidance with a machine-learning risk classification and explainability (XAI) module, delivered as a native mobile app.
