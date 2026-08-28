@@ -1,1 +1,0 @@
-# D-care-app-DEMO-
