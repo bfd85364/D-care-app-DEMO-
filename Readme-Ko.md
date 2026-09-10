@@ -6,6 +6,11 @@ https://drive.google.com/file/d/11BLR-3ndl_VDxocrzM5VM9lh4ScBfyzp/view?usp=shari
 
 # description:
 
+
+https://github.com/user-attachments/assets/7657c8c9-8075-4f5b-bcde-f1ffd82d5c8f
+
+
+
 # D-Care
 
 **D-Care**는 학과 간 협업으로 진행되는 캡스톤 디자인 프로젝트로, 만성질환(당뇨) 헬스케어 모바일 애플리케이션입니다. LLM-RAG 기반 챗봇을 통한 상담/생활습관 가이드와, 머신러닝 기반 위험도 분류 및 설명가능성(XAI) 모듈을 하나의 네이티브 모바일 앱으로 제공합니다.
