@@ -152,7 +152,4 @@ Flutter 앱의 `API_BASE_URL`을 ngrok이 발급한 포워딩 URL로 업데이�
 - **컴퓨터공학과:** 모바일 앱(Flutter), 백엔드(FastAPI), LLM-RAG 이식
 - **인공지능학과:** 데이터 전처리, 모델 학습(LightGBM), SHAP/XAI 파이프라인, 규칙 기반 피드백 설계
 
-## 라이선스
-
-사용할 라이선스를 여기에 명시하세요 (예: MIT).
 
