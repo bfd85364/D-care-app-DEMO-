@@ -9,7 +9,7 @@ https://drive.google.com/file/d/11BLR-3ndl_VDxocrzM5VM9lh4ScBfyzp/view?usp=shari
 
 https://github.com/user-attachments/assets/7657c8c9-8075-4f5b-bcde-f1ffd82d5c8f
 
-
+(해당 배포본에 등록된 모든 계정은 실존하지 않는 더미 계정입니다.)
 
 # D-Care
 
