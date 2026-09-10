@@ -54,70 +54,6 @@ This is a joint project between a **Computer Engineering** track (mobile app, ba
 - 📝 5-page health profile intake form
 - 🌐 Cross-network development support via ngrok
 
-## Getting Started
-
-### Prerequisites
-
-- Flutter SDK (Android Studio recommended)
-- Python 3.10+
-- An OpenRouter API key
-- (Optional) AWS EC2 instance for backend hosting
-
-### Backend Setup
-
-```bash
-# Clone the repository
-git clone https://github.com/<your-org>/D-care_01.git
-cd D-care_01
-
-# Create and activate a virtual environment
-python3 -m venv venv
-source venv/bin/activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Configure environment variables
-cp .env.example .env
-# Edit .env and set:
-#   SECRET_KEY=<your-jwt-secret>
-#   OPENROUTER_API_KEY=<your-openrouter-key>
-
-# Generate the database (or regenerate after any schema change)
-python create_db.py
-
-# Run the server
-uvicorn main:app --host 0.0.0.0 --port <BACKEND_PORT>
-```
-
-### Frontend Setup
-
-```bash
-cd D-care_app  # Flutter project directory
-
-# Install packages
-flutter pub get
-
-# Configure API base URL
-# In .env (Flutter), set API_BASE_URL to your machine's wireless LAN IPv4 address
-# (NOT 10.0.2.2 — that only works for the Android emulator, not physical devices)
-
-# Run on a connected device / emulator
-flutter run
-```
-
-### Cross-Network Access (ngrok)
-
-When developing across restricted or AP-isolated networks (e.g., switching between classroom and dormitory Wi-Fi), expose the backend with ngrok:
-
-```bash
-ngrok http <BACKEND_PORT>
-```
-
-Update the Flutter app's `API_BASE_URL` to the ngrok forwarding URL. Physical device testing uses the backend's configured port (see internal config — not published here).
-
-> Windows users: remember to add/adjust an inbound firewall rule for the dev port whenever the network changes.
-
 ## Environment Variables
 
 | Variable | Location | Description |
@@ -126,31 +62,11 @@ Update the Flutter app's `API_BASE_URL` to the ngrok forwarding URL. Physical de
 | `OPENROUTER_API_KEY` | Backend `.env` | API key for OpenRouter (LLM access) |
 | `API_BASE_URL` | Flutter `.env` | Backend base URL (LAN IP or ngrok URL) |
 
-## Known Limitations / Roadmap
-
-These are tracked as post-presentation cleanup items:
-
-- Removal of dead `rag_used` field (DB column, schema, router, Flutter model) — RAG is currently always active
-- Prompt-injection hardening in `llm_service.py` (strict system/user role separation, input delimiting)
-- Investigation of feature leakage in the V8 risk model (`HE_HbA1c` in `layer_b`)
-- Activation of trend tracking (`trend_message`, `last_factors_json` column)
-- Granularizing family-history input from a single boolean into three model features (`HE_DMfh1/2/3`)
-- Refresh/retry token logic, CORS restriction (currently `allow_origins=["*"]`), login rate limiting
-- Potential OAuth login (e.g., Kakao)
-
-## Security Notes
-
-- All critical endpoints require JWT authentication (`Depends(get_current_user)`).
-- Secrets are loaded from `.env`, not hardcoded.
-- SQLite is not network-exposed; access is only via authenticated API endpoints.
-- Backend ports are open broadly to support multi-network demos; SSH access should be restricted to known IPs. (Specific port numbers and IP ranges are intentionally omitted here — see internal deployment docs.)
 
 ## Team
 
 - **Computer Engineering:** Mobile app (Flutter), backend (FastAPI), LLM-RAG integration
 - **AI/ML:** Data preprocessing, model training (LightGBM), SHAP/XAI pipeline, rule-based feedback design
-
-## License
 
 Specify your license here (e.g., MIT).
 
